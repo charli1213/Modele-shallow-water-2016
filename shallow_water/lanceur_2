@@ -1,0 +1,4 @@
+
+rm exec2
+gfortran sadourny_2.f90 -o exec2
+./exec2

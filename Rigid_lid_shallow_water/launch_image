@@ -1,0 +1,34 @@
+# Il faut ouvrir «gnuplot» et dire «load 'launch_image'»
+
+set size 1.2,1.2
+set size square
+set multiplot layout 1,2
+unset key
+
+#set pm3d map interpolate 0,0
+#set palette rgb 12,10,10
+set xtics auto
+set xlabel 'axe des x'
+set ylabel 'axe des y'
+set autoscale x
+set autoscale y
+#set cbrange [:]
+#set contour
+set zrange [:]
+
+# Image initiale
+#================================|
+set origin 0.0,0.0
+set size 0.5,0.5
+set title 'Conditions initiales'
+splot 'sinus.txt' matrix with line
+
+set origin 0.5,0.0
+set size 0.5,0.5
+set title 'Conditions initiales'
+splot 'sinus3.txt' matrix with line
+
+
+
+
+unset multiplot	
